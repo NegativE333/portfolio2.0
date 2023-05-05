@@ -36,7 +36,7 @@ const Heading: React.FC<HeadingProps> = ({
     return(
         <motion.div
             animate={animation}
-            className="mb-4"
+            className="mb-4 overflow-hidden"
         >
             <div className="text-3xl font-semibold">
                 {title}
