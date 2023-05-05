@@ -1,7 +1,10 @@
 "use client";
 
+import { motion, useAnimation } from "framer-motion";
 import Heading from "../components/Heading";
 import Card from "../components/card/Card";
+import { useInView } from 'react-intersection-observer';
+import { useEffect } from "react";
 
 const data = [
   {
@@ -55,26 +58,37 @@ const data = [
 ];
 
 const Projects = () => {
+
+  const [ref, inView] = useInView();
+  const animation = useAnimation();
+
   return (
-    <div className="lg:h-[90vh] relative pb-6 overflow-hidden mt-8">
+    <div 
+      ref={ref}
+      className="lg:h-[95vh] relative pb-6 overflow-hidden lg:mt-1 mt-10">
       <Heading 
         title="Projects"
         subTitle="A Showcase of Web Development Projects"
+        inView={inView}
       />
-      <div
+      <motion.div
+        animate={{rotate: [0, 90, 180, 270, 360], scale: [1.1, 1.2, 1.3, 1.3, 1.2, 1.1]}}
+        transition={{type: 'tween', duration: 15, repeat: Infinity}}
         className="w-0 h-0 
-          border-l-[300px] border-l-transparent
-          border-b-[450px] border-b-zinc-900
-          border-r-[300px] border-r-transparent absolute left-36 top-20 z-0" 
+          border-l-[150px] border-l-transparent
+          border-b-[225px] border-b-zinc-900
+          border-r-[150px] border-r-transparent absolute left-48 top-56 z-0" 
       >
-      </div>
-      <div
+      </motion.div>
+      <motion.div
+        animate={{rotate: [360, 270, 180, 90, 0], scale: [1.1, 1.2, 1.3, 1.3, 1.2, 1.1]}}
+        transition={{type: 'tween', duration: 15, repeat: Infinity}}
         className="w-0 h-0 
-          border-l-[300px] border-l-transparent
-          border-t-[450px] border-t-zinc-900
-          border-r-[300px] border-r-transparent absolute right-36 top-20 z-0" 
+          border-l-[150px] border-l-transparent
+          border-t-[225px] border-t-zinc-900
+          border-r-[150px] border-r-transparent absolute right-48 top-56 z-0" 
       >
-      </div>
+      </motion.div>
       <div className="grid lg:grid-cols-3  gap-4">
         {data.map((item) => (
           <Card
@@ -85,12 +99,16 @@ const Projects = () => {
             href={item.href}
             cat={item.category}
             ghref={item.ghref}
+            inView={inView}
           />
         ))}
       </div>
-      <div className="absolute right-0 lg:bottom-8 bottom-0 font-bold cursor-pointer">
+      <motion.div
+        whileHover={{backgroundColor: 'black', color: 'white'}}   
+        transition={{type: 'tween', duration: 3}}      
+        className="absolute right-0 lg:bottom-16 bottom-0 font-bold cursor-pointer p-1 rounded-md">
           More Projects -&gt;
-      </div>
+      </motion.div>
     </div>
   );
 };

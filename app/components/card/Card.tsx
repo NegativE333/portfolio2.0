@@ -1,5 +1,8 @@
 'use client';
 
+import { motion, useAnimation } from 'framer-motion';
+import { useEffect } from 'react';
+
 interface CardProps{
     title: string;
     cat: string;
@@ -7,6 +10,7 @@ interface CardProps{
     img: string;
     href: string;
     ghref: string;
+    inView: boolean;
 }
 
 const Card: React.FC<CardProps> = ({
@@ -15,10 +19,32 @@ const Card: React.FC<CardProps> = ({
     desc,
     img,
     href,
-    ghref
+    ghref,
+    inView
 }) => {
+
+    const animation = useAnimation();
+
+    useEffect(() => {
+        if(inView){
+            animation.start({
+                scale: [0.5, 1],
+                transition: {
+                    type: 'tween', 
+                    duration: 1.5
+                }
+            })
+        }
+        if(!inView){
+            animation.start({
+                scale: 0
+            })
+        }
+    }, [inView])
+
     return(
-        <div
+        <motion.div
+            animate={animation} 
             style={{backgroundImage: `url(${img})`, backgroundSize: 'cover'}}
             className="flex flex-col relative items-center h-[200px] lg:h-[250px] rounded-md"
         >
@@ -43,7 +69,7 @@ const Card: React.FC<CardProps> = ({
                     &#60;/&#62;
                 </a>
             </div>
-        </div>
+        </motion.div>
     )
 }
 

@@ -1,6 +1,7 @@
 import Container from "../Container";
 import { FiPhoneCall } from 'react-icons/fi';
 import { AiOutlineMail } from 'react-icons/ai';
+import AnimatedText from "../animation/AnimatedText";
 
 const Navbar = () => {
     return(
@@ -9,6 +10,7 @@ const Navbar = () => {
                 <Container>
                     <div className="flex flex-row items-center gap-3 md:gap-0 font-semibold ">
                         <div className="flex-1 text-2xl lg:text-start text-center">
+                            {/* <AnimatedText text="&#60; omTekade /&#62;"/> */}
                             &#60; omTekade /&#62;
                         </div>
                         <div className="lg:flex hidden flex-1 gap-6 justify-end ">
