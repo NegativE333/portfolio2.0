@@ -81,8 +81,8 @@ export function CardsCarousel() {
 
   return (
     <Carousel
-      slideSize="33%"
-      breakpoints={[{ maxWidth: 'sm', slideSize: '50%', slideGap: rem(1) }]}
+      slideSize={mobile ? '100%' : '33%'}
+      breakpoints={[{ maxWidth: 'sm', slideSize: '100%', slideGap: rem(1) }]}
       slideGap="xl"
       align="start"
       slidesToScroll={mobile ? 1 : 3}

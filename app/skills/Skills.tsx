@@ -56,7 +56,7 @@ const Skills = () => {
                 </motion.div>
                 <motion.div 
                     animate={animations2}
-                    className="mt-8 lg:mr-0 lg:ml-0 ml-4 mr-4 lg:flex hidden"
+                    className="lg:mt-8 lg:mr-0 lg:ml-0 lg:flex md:flex w-[95%] lg:w-[100%] lg:justify-center lg:items-center"
                 >
                     <CardsCarousel />
                 </motion.div>

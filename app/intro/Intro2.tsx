@@ -11,14 +11,28 @@ const Intro2 = () => {
             <div className="flex flex-col lg:gap-4 gap-2 items-center justify-center mt-4">
                 <div className="lg:text-3xl text-2xl">
                     {/* Hi there,  */}
-                    <AnimatedText text='Hi there,'/>
+                    <AnimatedText 
+                        text='Hi there,'
+                        fontSize='2rem'
+                    />
                 </div>
                 <div className="lg:text-4xl text-3xl flex">
-                    <AnimatedText text='I am'/> 
-                    <b><AnimatedText text='Om Tekade,'/></b>
+                    <AnimatedText 
+                        text='I am'
+                        fontSize='2rem'
+                    /> 
+                    <b>
+                        <AnimatedText 
+                            text='Om Tekade,'
+                            fontSize='2rem'
+                        />
+                    </b>
                 </div>
                 <div className="lg:text-3xl text-2xl flex">
-                    <AnimatedText text='a&nbsp;' />
+                    <AnimatedText 
+                        text='a&nbsp;' 
+                        fontSize='1.5rem'
+                    />
                     <b>
                     <TypewriterComponent 
                         options={{
@@ -45,7 +59,7 @@ const Intro2 = () => {
                     transition={{ type: 'tween', duration: 1}}
                     initial={{opacity: 0}}
                     className="lg:text-[1.1rem] lg:mt-10 mt-8 text-center">
-                    Follow me for updates on my work, insights into my creative process, and a glimpse into my personal life. Don't be shy, come say hi!"
+                    Follow me for updates on my work, insights into my creative process, and a glimpse into my personal life. Don't be shy, come say hi!
                 </motion.div>
                 <motion.div 
                     animate={{opacity: [0.7, 1, 1, 0.7]}}

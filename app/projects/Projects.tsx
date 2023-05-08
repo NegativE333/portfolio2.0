@@ -77,7 +77,7 @@ const Projects = () => {
         className="w-0 h-0 
           border-l-[150px] border-l-transparent
           border-b-[225px] border-b-zinc-900
-          border-r-[150px] border-r-transparent absolute left-48 top-56 z-0" 
+          border-r-[150px] border-r-transparent absolute left-48 md:left-24 top-56 z-0" 
       >
       </motion.div>
       <motion.div
@@ -86,10 +86,10 @@ const Projects = () => {
         className="w-0 h-0 
           border-l-[150px] border-l-transparent
           border-t-[225px] border-t-zinc-900
-          border-r-[150px] border-r-transparent absolute right-48 top-56 z-0" 
+          border-r-[150px] border-r-transparent absolute right-48 md:right-24 top-56 z-0" 
       >
       </motion.div>
-      <div className="grid lg:grid-cols-3  gap-4">
+      <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1  gap-4">
         {data.map((item) => (
           <Card
             key={item.title}

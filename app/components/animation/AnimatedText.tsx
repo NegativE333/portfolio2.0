@@ -5,10 +5,12 @@ import { motion } from "framer-motion";
 
 interface AnimatedTextProps{
     text: string;
+    fontSize: string;
 }
 
 const AnimatedText: React.FC<AnimatedTextProps> = ({
-    text
+    text,
+    fontSize
 }) => {
 
     const words = text.split(" ");
@@ -44,7 +46,7 @@ const AnimatedText: React.FC<AnimatedTextProps> = ({
 
     return(
         <motion.div
-        style={{ overflow: "hidden", display: "flex", fontSize: "2rem" }}
+        style={{ overflow: "hidden", display: "flex", fontSize: `${fontSize}` }}
         variants={container}
         initial="hidden"
         animate="visible"

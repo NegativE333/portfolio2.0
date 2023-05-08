@@ -53,7 +53,6 @@ const Deployment = () => {
                         style={{backgroundImage: 'url(/images/netlify2.png)', backgroundSize: 'cover'}}
                         className='lg:w-[300px] w-[100px] lg:h-[150px] h-[50px] rounded-md'
                     >
-                        
                     </div>
                 </div>
             </div>
