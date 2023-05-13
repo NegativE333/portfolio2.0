@@ -36,12 +36,12 @@ const Heading: React.FC<HeadingProps> = ({
     return(
         <motion.div
             animate={animation}
-            className="mb-4 overflow-hidden sm:text-start text-center"
+            className="mb-4 mt-4 overflow-hidden sm:text-start text-center"
         >
-            <div className="text-3xl font-semibold">
+            <div className="lg:text-3xl text-[1.8rem] font-semibold">
                 {title}
             </div>
-            <div>
+            <div className='text-[1rem]'>
                 {subTitle}
             </div>
         </motion.div>

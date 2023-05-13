@@ -50,7 +50,7 @@ const Skills = () => {
             <div className="flex flex-col items-center justify-center gap-8">
                 <motion.div 
                     animate={animations}
-                    className="lg:mt-4 mt-2 lg:mr-8 mr-4 lg:ml-8 ml-4 lg:text-[1.1rem] text-center lg:leading-7"
+                    className="lg:mt-4 mt-2 lg:mr-8 mr-4 lg:ml-8 ml-4 lg:text-[1.1rem] text-[0.9rem] text-center lg:leading-7"
                 >
                     I specialize in building web applications with <b>React JS</b>, and <b>Next JS</b>, leveraging their various libraries and frameworks to deliver fast, scalable, and maintainable applications I also use <b>Tailwind CSS</b> for creating responsive and visually stunning user interfaces. With expertise in <b>Node JS</b>, I can also build scalable and secure server-side applications that integrate seamlessly with <b>MongoDB</b> and <b>SQL databases</b>. Additionally, I'm proficient in using <b>Framer Motion</b> to create fluid animations that enhance the user experience of web applications. I take pride in my ability to stay up-to-date with the latest web development trends and technologies and delivering top-notch results for my clients.
                 </motion.div>
