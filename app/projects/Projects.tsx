@@ -5,6 +5,7 @@ import Heading from "../components/Heading";
 import Card from "../components/card/Card";
 import { useInView } from 'react-intersection-observer';
 import { useEffect } from "react";
+import { useRouter } from "next/navigation";
 
 const data = [
   {
@@ -62,10 +63,12 @@ const Projects = () => {
   const [ref, inView] = useInView();
   const animation = useAnimation();
 
+  const router = useRouter();
+
   return (
     <div 
       ref={ref}
-      className="lg:h-[95vh] relative pb-6 overflow-hidden lg:mt-1 mt-10">
+      className="lg:h-[95vh] h-full relative pb-16 lg:pb-4 overflow-hidden lg:mt-1 mt-10">
       <Heading 
         title="Projects"
         subTitle="A Showcase of Web Development Projects"
@@ -106,7 +109,9 @@ const Projects = () => {
       <motion.div
         whileHover={{backgroundColor: 'black', color: 'white'}}   
         transition={{type: 'tween', duration: 3}}      
-        className="absolute right-0 lg:bottom-16 bottom-0 font-bold cursor-pointer p-1 rounded-md">
+        className="absolute right-[30%] lg:right-1 lg:bottom-[2.5rem] bottom-1 font-bold cursor-pointer p-1 rounded-md ring-2 ring-black hover:ring-white "
+        onClick={() => router.push('/emptyPage')}
+      >
           More Projects -&gt;
       </motion.div>
     </div>
