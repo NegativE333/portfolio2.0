@@ -109,7 +109,7 @@ const Projects = () => {
       <motion.div
         whileHover={{backgroundColor: 'black', color: 'white'}}   
         transition={{type: 'tween', duration: 3}}      
-        className="absolute right-[30%] lg:right-1 lg:bottom-[2.5rem] bottom-1 font-bold cursor-pointer p-1 rounded-md ring-2 ring-black hover:ring-white "
+        className="absolute right-[30%] lg:right-1 lg:bottom-[1rem] bottom-1 font-bold cursor-pointer p-1 rounded-md ring-2 ring-black hover:ring-white "
         onClick={() => router.push('/emptyPage')}
       >
           More Projects -&gt;

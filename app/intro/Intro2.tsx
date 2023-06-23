@@ -7,7 +7,7 @@ import {motion} from 'framer-motion';
 
 const Intro2 = () => {
     return(
-        <div className="lg:h-[90vh]">
+        <div className="lg:h-[91.5vh] h-[93vh] flex">
             <div className="flex flex-col lg:gap-4 gap-2 items-center justify-center mt-4">
                 <div className="lg:text-3xl text-2xl">
                     {/* Hi there,  */}
