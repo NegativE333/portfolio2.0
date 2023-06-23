@@ -41,7 +41,7 @@ const Skills = () => {
     return(
         <div 
             ref={ref}
-            className="lg:h-[90vh] mt-8 lg:mt-0">
+            className="lg:h-[91.5vh] mt-8 lg:mt-0">
             <Heading 
                 title="Skills"
                 subTitle="My technical skills and expertise include"

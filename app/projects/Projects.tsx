@@ -9,6 +9,14 @@ import { useRouter } from "next/navigation";
 
 const data = [
   {
+    image: "/images/moneyMatters.png",
+    title: "Money Matters",
+    category: "Next JS",
+    desc: "A web paltform to manage and track expenses.",
+    href: "https://money-matter2-0-d6qr.vercel.app/",
+    ghref: "https://github.com/NegativE333/MoneyMatter2.0",
+  },
+  {
     image: "/images/loud.png",
     title: "loud",
     category: "Next JS",
@@ -41,14 +49,6 @@ const data = [
     ghref: "https://github.com/NegativE333/airbnbClone",
   },
   {
-    image: "/images/iPhone3D.png",
-    title: "3D iPhone Preview",
-    category: "Next JS",
-    desc: "In this website I used the 3D modal of IPhone for its preview.",
-    href: "https://iphone-preview.netlify.app/",
-    ghref: "https://github.com/NegativE333/iPhonePreview3D",
-  },
-  {
     image: "/images/OtakuShowCase.png",
     title: "Otaku App Showcase",
     category: "React JS",
@@ -68,7 +68,7 @@ const Projects = () => {
   return (
     <div 
       ref={ref}
-      className="lg:h-[95vh] h-full relative pb-16 lg:pb-4 overflow-hidden lg:mt-1 mt-10">
+      className="lg:h-[91.5vh] h-full relative pb-16 lg:pb-4 overflow-hidden lg:mt-1 mt-10">
       <Heading 
         title="Projects"
         subTitle="A Showcase of Web Development Projects"

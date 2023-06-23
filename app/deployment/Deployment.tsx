@@ -28,7 +28,7 @@ const Deployment = () => {
     return(
         <div 
             ref={ref}
-            className='h-[80vh] lg:mt-0 mt-8'
+            className='h-[91.5vh] lg:mt-0 mt-8'
         >
             <Heading 
                 title='Project Deployment'

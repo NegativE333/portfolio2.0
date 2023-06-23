@@ -20,16 +20,16 @@ const Heading: React.FC<HeadingProps> = ({
     useEffect(() => {
         if(inView){
             animation.start({
-                y: 0,
+                opacity: 100,
                 transition: {
                     type: 'tween',
-                    duration: 1
+                    duration: 2
                 }
             })
         }
         if(!inView){
             animation.start({
-                y: -70,
+                opacity: 0,
             })
         }
     })
